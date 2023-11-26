@@ -7,6 +7,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Validation\ValidationException;
 
 class LoginRequest extends FormRequest
@@ -56,6 +57,8 @@ class LoginRequest extends FormRequest
 
         if (!Auth::attempt($this->only($this->userType, 'password'), $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
+
+            Alert::toast(trans('auth.failed'), 'error');
 
             throw ValidationException::withMessages([
                 'userType' => trans('auth.failed'),
