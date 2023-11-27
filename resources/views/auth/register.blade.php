@@ -8,7 +8,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="assets/media/favicon.ico" />
 
+    <!-- Primary Meta Tags -->
+    <meta name="keywords" content="Muhammad Mauribi, MuhamDaily, MuhamPedia, Laravel Breeze, Authentication" />
+    <meta name="author" content="Muhammad Mauribi" />
+    <meta name="title" content="Laravel - Authentication" />
+    <meta name="description"
+        content="Starter pack for building websites using Laravel Breeze which has been modified with Keed Admin integration." />
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://demo.muhamdaily.com" />
+    <meta property="og:author" content="Muhammad Mauribi" />
+    <meta property="og:title" content="Laravel - Authentication" />
+    <meta property="og:description"
+        content="Starter pack for building websites using Laravel Breeze which has been modified with Keed Admin integration." />
+    <meta property="og:image" content="{{ asset('assets/media/logo.png') }}" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://demo.muhamdaily.com" />
+    <meta property="twitter:title" content="Laravel - Authentication" />
+    <meta property="twitter:description"
+        content="Starter pack for building websites using Laravel Breeze which has been modified with Keed Admin integration." />
+    <meta property="twitter:image" content="{{ asset('assets/media/logo.png') }}" />
 
     <!--begin::Fonts(mandatory for all pages)-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
@@ -179,8 +201,8 @@
                             <!--end::Input group=-->
                             <div class="fv-row mb-8">
                                 <!--begin::Repeat Password-->
-                                <input placeholder="Password Confirmation" name="password_confirmation" type="password"
-                                    autocomplete="new-password"
+                                <input placeholder="Password Confirmation" name="password_confirmation"
+                                    type="password" autocomplete="new-password"
                                     class="form-control bg-transparent @error('password_confirmation') is-invalid @enderror" />
 
                                 @error('password_confirmation')
