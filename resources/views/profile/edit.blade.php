@@ -352,3 +352,7 @@
         <!--end::Content-->
     </div>
 @endsection
+
+@push('custom-javascript')
+    {{-- <script src="assets/js/custom/account/settings/deactivate-account.js"></script> --}}
+@endpush
