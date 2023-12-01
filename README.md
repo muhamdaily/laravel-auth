@@ -76,6 +76,17 @@ MAIL_FROM_ADDRESS="hello@example.com"
 MAIL_FROM_NAME="${APP_NAME}"
 ```
 
+Update the .env file with your APi Keys.
+```bash
+# Github Auth APi Key
+GITHUB_CLIENT_ID=
+GITHUB_CLIENT_SECRET=
+
+# Google Auth APi Key
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+```
+
 ## Using
 Run Migrations and Seed the Database
 
