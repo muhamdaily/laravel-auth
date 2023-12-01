@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Str;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -22,6 +23,9 @@ class User extends Authenticatable implements MustVerifyEmail
         'username',
         'email',
         'password',
+        'provider',
+        'provider_id',
+        'provider_token'
     ];
 
     /**
@@ -43,4 +47,18 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public static function generateUserName($username)
+    {
+        if ($username === null) {
+            $username = Str::lower(Str::random(8));
+        }
+
+        if (User::where('username', $username)->exists()) {
+            $newUsername = $username . Str::lower(Str::random(3));
+            $username = self::generateUserName($newUsername);
+        }
+
+        return $username;
+    }
 }

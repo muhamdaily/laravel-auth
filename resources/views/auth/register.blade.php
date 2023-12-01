@@ -110,38 +110,69 @@
                                 <!--end::Subtitle=-->
                             </div>
                             <!--begin::Heading-->
-                            <!--begin::Input group=-->
-                            <div class="fv-row mb-8">
-                                <!--begin::Email-->
-                                <input type="text" placeholder="Name" name="name" autocomplete="name"
-                                    class="form-control bg-transparent @error('name') is-invalid @enderror"
-                                    value="{{ old('name') }}" />
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                                <!--end::Email-->
+                            <!--begin::Login options-->
+                            <div class="row g-3 mb-9">
+                                <!--begin::Col-->
+                                <div class="col-md-6">
+                                    <!--begin::Google link=-->
+                                    <a href="/auth/google/redirect"
+                                        class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
+                                        <img alt="Logo" src="assets/media/svg/brand-logos/google-icon.svg"
+                                            class="h-15px me-3" />Sign up with Google</a>
+                                    <!--end::Google link=-->
+                                </div>
+                                <!--end::Col-->
+                                <!--begin::Col-->
+                                <div class="col-md-6">
+                                    <!--begin::Github link=-->
+                                    <a href="/auth/github/redirect"
+                                        class="btn btn-flex btn-outline btn-text-gray-700 btn-active-color-primary bg-state-light flex-center text-nowrap w-100">
+                                        <img alt="Logo" src="assets/media/svg/brand-logos/github-1.svg"
+                                            class="theme-light-show h-15px me-3" />
+                                        <img alt="Logo" src="assets/media/svg/brand-logos/github-1.svg"
+                                            class="theme-dark-show h-15px me-3" />Sign up with Github</a>
+                                    <!--end::Github link=-->
+                                </div>
+                                <!--end::Col-->
                             </div>
-                            <!--begin::Input group-->
-                            <!--begin::Input group=-->
-                            <div class="fv-row mb-8">
-                                <!--begin::Email-->
-                                <input type="text" placeholder="Username" name="username" autocomplete="username"
-                                    class="form-control bg-transparent @error('username') is-invalid @enderror"
-                                    value="{{ old('username') }}" />
-
-                                @error('username')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                                <!--end::Email-->
+                            <!--end::Login options-->
+                            <!--begin::Separator-->
+                            <div class="separator separator-content my-14">
+                                <span class="w-125px text-gray-500 fw-semibold fs-7">Or with email</span>
                             </div>
-                            <!--begin::Input group-->
+                            <!--end::Separator-->
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-sm-6 mb-5">
+                                    <!--begin::Email-->
+                                    <input type="text" placeholder="Name" name="name" autocomplete="name"
+                                        class="form-control bg-transparent @error('name') is-invalid @enderror"
+                                        value="{{ old('name') }}" />
+
+                                    @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                    <!--end::Email-->
+                                </div>
+
+                                <div class="col-12 col-md-6 col-sm-6 mb-5">
+                                    <!--begin::Email-->
+                                    <input type="text" placeholder="Username" name="username"
+                                        autocomplete="username"
+                                        class="form-control bg-transparent @error('username') is-invalid @enderror"
+                                        value="{{ old('username') }}" />
+
+                                    @error('username')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                    <!--end::Email-->
+                                </div>
+                            </div>
                             <!--begin::Input group=-->
-                            <div class="fv-row mb-8">
+                            <div class="fv-row mb-5">
                                 <!--begin::Email-->
                                 <input type="email" placeholder="Email" name="email" autocomplete="email"
                                     class="form-control bg-transparent @error('email') is-invalid @enderror"
@@ -155,9 +186,8 @@
                                 <!--end::Email-->
                             </div>
                             <!--begin::Input group-->
-                            <div class="fv-row mb-8" data-kt-password-meter="true">
-                                <!--begin::Wrapper-->
-                                <div class="mb-1">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-sm-6 mb-5" data-kt-password-meter="true">
                                     <!--begin::Input wrapper-->
                                     <div class="position-relative mb-3">
                                         <input
@@ -191,28 +221,25 @@
                                     </div>
                                     <!--end::Meter-->
                                 </div>
-                                <!--end::Wrapper-->
-                                <!--begin::Hint-->
-                                <div class="text-muted">Use 8 or more characters with a mix of letters, numbers &
-                                    symbols.</div>
-                                <!--end::Hint-->
-                            </div>
-                            <!--end::Input group=-->
-                            <!--end::Input group=-->
-                            <div class="fv-row mb-8">
-                                <!--begin::Repeat Password-->
-                                <input placeholder="Password Confirmation" name="password_confirmation"
-                                    type="password" autocomplete="new-password"
-                                    class="form-control bg-transparent @error('password_confirmation') is-invalid @enderror" />
 
-                                @error('password_confirmation')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                                <!--end::Repeat Password-->
+                                <div class="col-12 col-md-6 col-sm-6 mb-5">
+                                    <!--begin::Repeat Password-->
+                                    <input placeholder="Password Confirmation" name="password_confirmation"
+                                        type="password" autocomplete="new-password"
+                                        class="form-control bg-transparent @error('password_confirmation') is-invalid @enderror" />
+
+                                    @error('password_confirmation')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                    <!--end::Repeat Password-->
+                                </div>
                             </div>
-                            <!--end::Input group=-->
+                            <!--begin::Hint-->
+                            <div class="text-muted mb-5">Use 8 or more characters with a mix of letters, numbers &
+                                symbols.</div>
+                            <!--end::Hint-->
                             <!--begin::Accept-->
                             <div class="fv-row mb-8">
                                 <label class="form-check form-check-inline">
