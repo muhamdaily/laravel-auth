@@ -36,6 +36,7 @@ class ProviderController extends Controller
                 $user = User::create([
                     'name' => $SocialUser->getName(),
                     'email' => $SocialUser->getEmail(),
+                    'role' => 'user',
                     'username' => User::generateUserName($SocialUser->getNickname()),
                     'provider' => $provider,
                     'provider_id' => $SocialUser->getId(),
@@ -50,7 +51,7 @@ class ProviderController extends Controller
                 ]);
             }
             Auth::login($user);
-            return to_route('dashboard')->withToastSuccess('Hello ' . Auth::user()->name . '!,  Welcome back.');
+            return to_route('home')->withToastSuccess('Hello ' . Auth::user()->name . '!,  Welcome back.');
         } catch (\Exception $e) {
             return to_route('login');
         }

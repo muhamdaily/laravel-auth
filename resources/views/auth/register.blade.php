@@ -7,6 +7,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="assets/media/favicon.ico" />
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
 
     <!-- Primary Meta Tags -->
     <meta name="keywords" content="Muhammad Mauribi, MuhamDaily, MuhamPedia, Laravel Breeze, Authentication" />
@@ -79,7 +81,7 @@
                 <div class="d-flex flex-column flex-center p-6 p-lg-10 w-100">
                     <!--begin::Logo-->
                     <a href="{{ url('/') }}" class="mb-0 mb-lg-20">
-                        <img alt="Logo" src="assets/media/logos/default-white.svg" class="h-40px h-lg-50px" />
+                        <img alt="Logo" src="assets/media/logos/default-white.svg" class="h-40px h-lg-70px" />
                     </a>
                     <!--end::Logo-->
                     <!--begin::Image-->

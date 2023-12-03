@@ -7,6 +7,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="assets/media/favicon.ico" />
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
 
     <!-- Primary Meta Tags -->
     <meta name="keywords" content="Muhammad Mauribi, MuhamDaily, MuhamPedia, Laravel Breeze, Authentication" />
