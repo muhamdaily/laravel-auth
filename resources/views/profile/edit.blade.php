@@ -72,7 +72,7 @@
                                     <div class="col-lg-9 fv-row">
                                         <input type="text" name="username"
                                             class="form-control form-control-lg form-control-solid @error('username') is-invalid @enderror"
-                                            placeholder="Username" value="{{ old('name', $user->username) }}"
+                                            placeholder="Username" value="{{ old('username', $user->username) }}"
                                             autocomplete="username" />
 
                                         @error('username')
