@@ -3,7 +3,7 @@
 <!--begin::Head-->
 
 <head>
-    <title>{{ config('app.name', 'Laravel') }} | @yield('title')</title>
+    <title>{{ config('app.name', 'Laravel') }} &minus; {{ $title }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="assets/media/favicon.ico" />

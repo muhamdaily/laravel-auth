@@ -37,7 +37,7 @@ class PasswordResetLinkController extends Controller
         );
 
         return $status == Password::RESET_LINK_SENT
-            ? back()->withToastSuccess('Successfully sent password reset link, please check your email', __($status))
+            ? back()->withToastSuccess('Tautan pengaturan ulang kata sandi berhasil dikirim, silakan periksa email Anda', __($status))
             : back()->withInput($request->only('email'))
             ->withErrors(['email' => __($status)]);
     }

@@ -54,7 +54,9 @@
                     <div class="menu-item pt-5">
                         <!--begin:Menu content-->
                         <div class="menu-content">
-                            <span class="menu-heading fw-bold text-uppercase fs-7">Other Menu</span>
+                            <span class="menu-heading fw-bold text-uppercase fs-7">
+                                Menu Lainnya
+                            </span>
                         </div>
                         <!--end:Menu content-->
                     </div>
@@ -70,7 +72,9 @@
                                     <span class="path2"></span>
                                 </i>
                             </span>
-                            <span class="menu-title">Menu One</span>
+                            <span class="menu-title">
+                                Dokumentasi
+                            </span>
                         </a>
                         <!--end:Menu link-->
                     </div>

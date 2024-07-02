@@ -156,7 +156,8 @@
                                 <div class="d-flex flex-column">
                                     <div class="fw-bold d-flex align-items-center fs-5">{{ auth()->user()->name }}
                                     </div>
-                                    <a href="" class="fw-semibold text-muted text-hover-primary fs-7">
+                                    <a href="{{ route('profile.edit') }}"
+                                        class="fw-semibold text-muted text-hover-primary fs-7">
                                         {{ auth()->user()->email }}
                                     </a>
                                 </div>
@@ -169,13 +170,15 @@
                         <!--end::Menu separator-->
                         <!--begin::Menu item-->
                         <div class="menu-item px-5 my-1">
-                            <a href="{{ route('profile.edit') }}" class="menu-link px-5">Account Settings</a>
+                            <a href="{{ route('profile.edit') }}" class="menu-link px-5">
+                                Pengaturan Akun
+                            </a>
                         </div>
                         <!--end::Menu item-->
                         <!--begin::Menu item-->
                         <div class="menu-item px-5">
                             <a href="javascript:void(0);" class="menu-link px-5 text-danger" onclick="submitForm()">
-                                Sign Out
+                                Keluar
                             </a>
 
                             <form id="formKeluar" action="{{ route('logout') }}" method="POST">

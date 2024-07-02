@@ -17,6 +17,14 @@ class ProfileUpdateRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
+            'gender' => ['required'],
+            'place_of_birth' => ['nullable'],
+            'date_of_birth' => ['nullable'],
+            'province_id' => ['required', 'exists:provinces,id'],
+            'district_id' => ['required', 'exists:districts,id'],
+            'subdistrict_id' => ['required', 'exists:subdistricts,id'],
+            'address' => ['nullable'],
+            'phone' => ['nullable'],
             'username' => 'required|unique:users,username,' . auth()->id(),
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
         ];

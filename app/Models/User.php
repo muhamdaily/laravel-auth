@@ -19,14 +19,22 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'province_id',
+        'district_id',
+        'subdistrict_id',
         'username',
+        'name',
+        'gender',
+        'address',
+        'place_of_birth',
+        'date_of_birth',
         'email',
+        'phone',
         'role',
         'password',
         'provider',
         'provider_id',
-        'provider_token'
+        'provider_token',
     ];
 
     /**
@@ -61,5 +69,20 @@ class User extends Authenticatable implements MustVerifyEmail
         }
 
         return $username;
+    }
+
+    public function province()
+    {
+        return $this->belongsTo(Province::class);
+    }
+
+    public function district()
+    {
+        return $this->belongsTo(District::class);
+    }
+
+    public function subdistrict()
+    {
+        return $this->belongsTo(Subdistrict::class);
     }
 }

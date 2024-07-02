@@ -1,5 +1,6 @@
-@extends('app')
-@section('title', 'Dashboard')
+@extends('app', [
+    'title' => 'Dashboard',
+])
 
 @section('content')
     @include('sweetalert::alert')

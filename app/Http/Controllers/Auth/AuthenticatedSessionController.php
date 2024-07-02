@@ -29,7 +29,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(RouteServiceProvider::HOME)->withToastSuccess('Hello ' . Auth::user()->name . '!,  Welcome back.');
+        return redirect()->intended(RouteServiceProvider::HOME)->withToastSuccess('Selamat Datang ' . Auth::user()->name . '!');
     }
 
     /**
@@ -43,6 +43,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect()->route('login')->withToastSuccess('Your session has ended, please log in again.');
+        return redirect()->route('login')->withToastSuccess('Sesi Anda telah berakhir, silakan masuk kembali.');
     }
 }
